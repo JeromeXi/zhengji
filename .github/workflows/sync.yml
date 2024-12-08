@@ -2,6 +2,12 @@ name: Sync Fork
 on:
   schedule:
     - cron: '* */3 * * *' # 每3小时触发
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
 jobs:
   repo-sync:
     runs-on: ubuntu-latest
