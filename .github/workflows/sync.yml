@@ -17,4 +17,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           owner: ZJ595 # 上游仓库的用户名
           head: AndroidReverse # 上游仓库的分支名
-          base: zhengji # 你的仓库分支名
+          base: AndroidReverse # 你的仓库分支名
