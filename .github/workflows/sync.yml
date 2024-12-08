@@ -1,0 +1,14 @@
+name: Sync Fork
+on:
+  schedule:
+    - cron: '* */3 * * *' # 每3小时触发
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: TG908/fork-sync@v1.6.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          owner: upstream_owner # 上游仓库的用户名
+          head: upstream_branch # 上游仓库的分支名
+          base: your_branch # 你的仓库分支名
