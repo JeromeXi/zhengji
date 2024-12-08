@@ -1,0 +1,21 @@
+name: Sync Fork
+on:
+  schedule:
+    - cron: '* */3 * * *' # 每3小时触发
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: TG908/fork-sync@v1.6.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          owner: ZJ595 # 上游仓库的用户名
+          repo: AndroidReverse # 上游仓库的名称
+          head: master # 上游仓库的分支名
+          base: master # 你的仓库分支名
