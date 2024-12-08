@@ -9,6 +9,6 @@ jobs:
       - uses: TG908/fork-sync@v1.6.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          owner: upstream_owner # 上游仓库的用户名
-          head: upstream_branch # 上游仓库的分支名
-          base: your_branch # 你的仓库分支名
+          owner: ZJ595 # 上游仓库的用户名
+          head: AndroidReverse # 上游仓库的分支名
+          base: zhengji # 你的仓库分支名
